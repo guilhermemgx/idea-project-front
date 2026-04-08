@@ -1,0 +1,291 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #1f2937;
+  background: #f3f4f6;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.topbar {
+  background: #111827;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 0.3rem 0 0;
+  color: #cbd5e1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: #e5e7eb;
+}
+
+.nav-link-active {
+  background: #2563eb;
+  color: #fff;
+}
+
+.page-content {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.page-header p {
+  margin: 0.35rem 0 0;
+  color: #4b5563;
+}
+
+.page-actions,
+.page-actions-inline,
+.form-actions,
+.row-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.filter-bar input {
+  width: 100%;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 1rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+
+th {
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.multiline-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  transition: 0.2s ease;
+}
+
+.button.primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.button.ghost {
+  background: #eef2ff;
+  color: #1e3a8a;
+}
+
+.button.danger {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.status-message {
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  margin-bottom: 1rem;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.status-message.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-message.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.field-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.two-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field label,
+.detail-label {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.field input:focus,
+.field textarea:focus,
+.filter-bar input:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #60a5fa;
+}
+
+.filter-bar input {
+  padding: 0.9rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+}
+
+.field-error {
+  color: #b91c1c;
+  font-size: 0.9rem;
+}
+
+.detail-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.detail-row {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.detail-row p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.not-found {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .two-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .page-content {
+    padding: 1.25rem 0.75rem 2rem;
+  }
+
+  .topbar {
+    padding: 1.25rem 1rem;
+  }
+}
